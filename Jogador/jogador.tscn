@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://cld2u5xi142px"]
+
+[ext_resource type="Script" uid="uid://de6bdq05f6mxf" path="res://Scripts/Jogador.gd" id="1_8ytgn"]
+[ext_resource type="Texture2D" uid="uid://cickon7axvr6j" path="res://Sprites/1 - Penguin/Idle (16 x 16).png" id="2_088gh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qsmec"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_damf5"]
+atlas = ExtResource("2_088gh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2an4"]
+atlas = ExtResource("2_088gh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpu4g"]
+atlas = ExtResource("2_088gh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_janmr"]
+atlas = ExtResource("2_088gh")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1rp1"]
+atlas = ExtResource("2_088gh")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3cih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_damf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2an4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpu4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_janmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1rp1")
+}],
+"loop": true,
+"name": &"Parado",
+"speed": 5.0
+}]
+
+[node name="Jogador" type="CharacterBody2D"]
+position = Vector2(39, 23)
+script = ExtResource("1_8ytgn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_qsmec")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_f3cih")
+animation = &"Parado"
+autoplay = "Parado"
+frame_progress = 0.7460357
