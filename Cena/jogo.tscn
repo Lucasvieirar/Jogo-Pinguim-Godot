@@ -1,18 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://gnkaycdcsvym"]
+[gd_scene load_steps=5 format=3 uid="uid://gnkaycdcsvym"]
 
 [ext_resource type="PackedScene" uid="uid://cld2u5xi142px" path="res://Jogador/jogador.tscn" id="1_db0ww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayubf"]
-size = Vector2(1155.5, 82.25)
+size = Vector2(110, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db0ww"]
+size = Vector2(55.5, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sauhn"]
+size = Vector2(55.5, 24)
 
 [node name="Jogo" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(577.75, 118)
+position = Vector2(56, 164)
 shape = SubResource("RectangleShape2D_ayubf")
 debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
 
-[node name="Jogador" parent="StaticBody2D/CollisionShape2D" instance=ExtResource("1_db0ww")]
-position = Vector2(-520, -68)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(148, 165)
+shape = SubResource("RectangleShape2D_db0ww")
+debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(217, 165)
+shape = SubResource("RectangleShape2D_sauhn")
+debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(290, 150)
+shape = SubResource("RectangleShape2D_sauhn")
+debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(355, 130)
+shape = SubResource("RectangleShape2D_sauhn")
+debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(417, 111)
+shape = SubResource("RectangleShape2D_sauhn")
+debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
+
+[node name="Jogador" parent="StaticBody2D" instance=ExtResource("1_db0ww")]
+position = Vector2(13, 138)
