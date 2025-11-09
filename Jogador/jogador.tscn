@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cld2u5xi142px"]
+[gd_scene load_steps=19 format=3 uid="uid://cld2u5xi142px"]
 
 [ext_resource type="Script" uid="uid://de6bdq05f6mxf" path="res://Scripts/Jogador.gd" id="1_8ytgn"]
 [ext_resource type="Texture2D" uid="uid://cickon7axvr6j" path="res://Sprites/1 - Penguin/Idle (16 x 16).png" id="2_088gh"]
+[ext_resource type="Texture2D" uid="uid://rrpcwb68twt7" path="res://Sprites/1 - Penguin/Waddling (16 x 16).png" id="3_damf5"]
+[ext_resource type="Texture2D" uid="uid://17buek7tc30f" path="res://Sprites/1 - Penguin/Jump (16 x 16).png" id="4_p2an4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qsmec"]
 radius = 7.0
@@ -27,6 +29,34 @@ region = Rect2(48, 0, 16, 16)
 atlas = ExtResource("2_088gh")
 region = Rect2(64, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3cih"]
+atlas = ExtResource("3_damf5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y45st"]
+atlas = ExtResource("3_damf5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8kyd"]
+atlas = ExtResource("3_damf5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osg5y"]
+atlas = ExtResource("3_damf5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5jh1"]
+atlas = ExtResource("3_damf5")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt5x4"]
+atlas = ExtResource("3_damf5")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi1fr"]
+atlas = ExtResource("4_p2an4")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_f3cih"]
 animations = [{
 "frames": [{
@@ -47,6 +77,37 @@ animations = [{
 }],
 "loop": true,
 "name": &"Parado",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3cih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y45st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8kyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osg5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5jh1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pt5x4")
+}],
+"loop": true,
+"name": &"anda",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi1fr")
+}],
+"loop": true,
+"name": &"pula",
 "speed": 5.0
 }]
 
@@ -61,6 +122,5 @@ shape = SubResource("CapsuleShape2D_qsmec")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_f3cih")
-animation = &"Parado"
+animation = &"pula"
 autoplay = "Parado"
-frame_progress = 0.7460357
