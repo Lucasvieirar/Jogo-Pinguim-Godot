@@ -129,6 +129,6 @@ autoplay = "Parado"
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
-limit_right = 460
+limit_right = 720
 limit_bottom = 200
 position_smoothing_enabled = true

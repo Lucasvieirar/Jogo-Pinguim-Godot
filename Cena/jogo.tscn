@@ -1,49 +1,62 @@
-[gd_scene load_steps=5 format=3 uid="uid://gnkaycdcsvym"]
+[gd_scene load_steps=5 format=4 uid="uid://gnkaycdcsvym"]
 
 [ext_resource type="PackedScene" uid="uid://cld2u5xi142px" path="res://Jogador/jogador.tscn" id="1_db0ww"]
+[ext_resource type="Texture2D" uid="uid://cx4k2sqvxkbt" path="res://Sprites/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="2_sauhn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayubf"]
-size = Vector2(110, 30)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ayubf"]
+texture = ExtResource("2_sauhn")
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:1/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+11:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+15:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+11:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+11:5/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+4:8/0 = 0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_db0ww"]
-size = Vector2(55.5, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sauhn"]
-size = Vector2(55.5, 24)
+[sub_resource type="TileSet" id="TileSet_ab5d5"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ayubf")
 
 [node name="Jogo" type="Node2D"]
+metadata/_edit_vertical_guides_ = [52.0]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Jogador" parent="." instance=ExtResource("1_db0ww")]
+position = Vector2(23, 139)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(56, 164)
-shape = SubResource("RectangleShape2D_ayubf")
-debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(148, 165)
-shape = SubResource("RectangleShape2D_db0ww")
-debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(217, 165)
-shape = SubResource("RectangleShape2D_sauhn")
-debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(290, 150)
-shape = SubResource("RectangleShape2D_sauhn")
-debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(355, 130)
-shape = SubResource("RectangleShape2D_sauhn")
-debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(417, 111)
-shape = SubResource("RectangleShape2D_sauhn")
-debug_color = Color(0, 0.64740753, 0.22025225, 0.41960785)
-
-[node name="Jogador" parent="StaticBody2D" instance=ExtResource("1_db0ww")]
-position = Vector2(13, 138)
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-585, 144)
+tile_map_data = PackedByteArray("AAAlAAEAAAAEAAEAAAAlAAIAAAAEAAIAAAAmAAEAAAAEAAEAAAAmAAIAAAAEAAIAAAAnAAEAAAAEAAEAAAAnAAIAAAAEAAIAAAAoAAEAAAAEAAEAAAAoAAIAAAAEAAIAAAApAAEAAAAEAAEAAAApAAIAAAAEAAIAAAAqAAEAAAAEAAEAAAAqAAIAAAAEAAIAAAArAAEAAAAEAAEAAAArAAIAAAAEAAIAAAAsAAEAAAAEAAEAAAAsAAIAAAAEAAIAAAAtAAEAAAAEAAEAAAAtAAIAAAAEAAIAAAAuAAEAAAAEAAEAAAAuAAIAAAAEAAIAAAAvAAEAAAAEAAEAAAAvAAIAAAAEAAIAAAAwAAEAAAAEAAEAAAAwAAIAAAAEAAIAAAAxAAEAAAAEAAEAAAAxAAIAAAAEAAIAAAAyAAEAAAAEAAEAAAAyAAIAAAAEAAIAAAAzAAIAAAAEAAIAAAA0AAAAAAAEAAEAAAA0AAEAAAADAAMAAAA0AAIAAAAEAAIAAAA1AAAAAAAEAAEAAAA1AAEAAAAEAAIAAAA1AAIAAAAEAAIAAAA2AAAAAAAEAAEAAAA2AAEAAAAEAAIAAAA3AAAAAAAEAAEAAAA3AAEAAAAEAAIAAAA4AP//AAAEAAEAAAA4AAAAAAADAAMAAAA4AAEAAAAEAAIAAAA5AP//AAAEAAEAAAA5AAAAAAAEAAIAAAA5AAEAAAAEAAIAAAA6AP7/AAAEAAEAAAA6AP//AAADAAMAAAA6AAAAAAAEAAIAAAA6AAEAAAAEAAIAAAA7AP7/AAAEAAEAAAA7AP//AAAEAAIAAAA7AAAAAAAEAAIAAAA7AAEAAAAEAAIAAAA8AP7/AAAEAAEAAAA8AP//AAAEAAIAAAA8AAAAAAAEAAIAAAA8AAEAAAAEAAIAAAA9AP3/AAAEAAEAAAA9AP7/AAADAAMAAAA9AP//AAAEAAIAAAA9AAAAAAAEAAIAAAA+AP3/AAAEAAEAAAA+AP7/AAAEAAIAAAA+AP//AAAEAAIAAAA+AAAAAAAEAAIAAAA/AP3/AAAEAAEAAAA/AP7/AAAEAAIAAAA/AP//AAAEAAIAAABAAP3/AAAEAAEAAABAAP7/AAAEAAIAAABBAP3/AAAEAAEAAABBAP7/AAAEAAIAAABCAP3/AAAEAAEAAABCAP7/AAAEAAIAAABDAP3/AAAEAAEAAABDAP7/AAAEAAIAAABEAP3/AAAEAAEAAABEAP7/AAAEAAIAAABFAPz/AAAEAAEAAABFAP3/AAADAAMAAABFAP7/AAAEAAIAAABGAPz/AAAEAAEAAABGAP3/AAAEAAIAAABGAP7/AAAEAAIAAABHAPz/AAAEAAEAAABHAP3/AAAEAAIAAABIAPz/AAAEAAEAAABIAP3/AAAEAAIAAABJAPz/AAAEAAEAAABJAP3/AAAEAAIAAABKAPz/AAAEAAEAAABKAP3/AAAEAAIAAABLAPz/AAAEAAEAAABLAP3/AAAEAAIAAABMAPz/AAAEAAEAAABMAP3/AAAEAAIAAABNAPz/AAAEAAEAAABNAP3/AAAEAAIAAABOAPz/AAAEAAEAAABOAP3/AAAEAAIAAABPAPz/AAAEAAEAAABPAP3/AAAEAAIAAABQAPz/AAAEAAEAAABQAP3/AAAEAAIAAAAzAAEAAAAEAAEAAAA=")
+tile_set = SubResource("TileSet_ab5d5")
