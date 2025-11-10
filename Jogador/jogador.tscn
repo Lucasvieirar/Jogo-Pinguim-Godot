@@ -121,6 +121,7 @@ position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_qsmec")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_f3cih")
 animation = &"anda"
@@ -129,6 +130,6 @@ autoplay = "Parado"
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
-limit_right = 720
+limit_right = 1200
 limit_bottom = 200
 position_smoothing_enabled = true
