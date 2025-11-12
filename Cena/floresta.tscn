@@ -11,6 +11,56 @@
 
 [node name="Floresta" type="Node2D"]
 
+[node name="ParallaxBackground" type="Node2D" parent="."]
+
+[node name="6" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/6"]
+texture = ExtResource("3_f5xhd")
+centered = false
+
+[node name="5" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/5"]
+texture = ExtResource("4_hbq7s")
+centered = false
+
+[node name="4" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4"]
+texture = ExtResource("5_tdh7l")
+centered = false
+
+[node name="3" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
+texture = ExtResource("6_ssyse")
+centered = false
+
+[node name="2" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2"]
+texture = ExtResource("7_jk0oj")
+centered = false
+
+[node name="1" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(1.5, 1.5)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
+texture = ExtResource("8_pl3oy")
+centered = false
+
 [node name="Jogador" parent="." instance=ExtResource("1_wi6se")]
 position = Vector2(27, 122)
 
@@ -18,53 +68,3 @@ position = Vector2(27, 122)
 position = Vector2(1, 0)
 tile_map_data = PackedByteArray("AAAAAAwAAQACAAMAAAABAAwAAQACAAMAAAACAAwAAQACAAMAAAADAAwAAQACAAMAAAAEAAwAAQACAAMAAAAFAAwAAQACAAMAAAAGAAwAAQACAAMAAAAHAAwAAQACAAMAAAAIAAwAAQACAAMAAAAJAAwAAQACAAMAAAAKAAwAAQACAAMAAAALAAwAAQACAAMAAAAMAAwAAQACAAMAAAANAAwAAQACAAMAAAAOAAwAAQACAAMAAAAPAAwAAQACAAMAAAAQAAwAAQACAAMAAAARAAwAAQACAAMAAAASAAwAAQACAAMAAAATAAwAAQACAAMAAAAUAAwAAQACAAMAAAAVAAwAAQACAAMAAAAWAAwAAQACAAMAAAAXAAwAAQACAAMAAAAYAAwAAQACAAMAAAAZAAwAAQACAAMAAAAaAAwAAQACAAMAAAAbAAwAAQACAAMAAAAcAAwAAQACAAMAAAAdAAwAAQACAAMAAAAeAAwAAQACAAMAAAAfAAsAAQACAAMAAAAfAAwAAQADAAMAAAAgAAsAAQACAAMAAAAhAAsAAQACAAMAAAAiAAsAAQACAAMAAAAjAAsAAQACAAMAAAAkAAsAAQACAAMAAAAlAAsAAQACAAMAAAAmAAsAAQACAAMAAAAnAAkAAQACAAMAAAAnAAoAAQAEAAMAAAAnAAsAAQADAAMAAAAoAAkAAQACAAMAAAA=")
 tile_set = ExtResource("2_7fdej")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="6" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.1, 0.1)
-motion_mirroring = Vector2(288, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/6"]
-texture = ExtResource("3_f5xhd")
-centered = false
-
-[node name="5" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.2, 0.2)
-motion_mirroring = Vector2(288, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/5"]
-texture = ExtResource("4_hbq7s")
-centered = false
-
-[node name="4" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(288, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4"]
-texture = ExtResource("5_tdh7l")
-centered = false
-
-[node name="3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.4, 0.4)
-motion_mirroring = Vector2(288, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3"]
-texture = ExtResource("6_ssyse")
-centered = false
-
-[node name="2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(288, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2"]
-texture = ExtResource("7_jk0oj")
-centered = false
-
-[node name="1" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(1.5, 1.5)
-motion_mirroring = Vector2(288, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1"]
-texture = ExtResource("8_pl3oy")
-centered = false
